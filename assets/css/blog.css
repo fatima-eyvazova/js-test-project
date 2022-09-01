@@ -1,0 +1,697 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url("../fonts/Chivo-Light.ttf");
+}
+@font-face {
+  font-family: secondaryFont;
+  src: url("../fonts/Chivo-Regular.ttf");
+}
+body {
+  font-family: myFirstFont;
+}
+
+header .header-top {
+  width: 100%;
+  height: 70px;
+  background: #32404d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+header .header-top p {
+  color: white;
+  font-size: 1rem;
+}
+header .header-top p span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #00b78a;
+  font-family: secondaryFont;
+}
+header .header-top .header-info-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+header .header-top .header-info-right a {
+  color: white;
+  border-bottom: 2px solid white;
+  padding-bottom: 6px;
+}
+header .header-top .header-info-right a:hover {
+  letter-spacing: 0.7px;
+  transition: all linear 0.3s;
+}
+header .header-top .header-info-right .timer {
+  display: flex;
+  gap: 20px;
+}
+header .header-top .header-info-right .timer div {
+  width: 32px;
+}
+header .header-top .header-info-right .timer div p {
+  text-align: center;
+  color: rgb(158, 164, 170);
+  line-height: 15px;
+}
+header .nav-sticky {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 83px;
+  background-color: white;
+  transition: all 0.5s;
+  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+          animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+header .nav-sticky.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 83px;
+  background-color: white;
+}
+header .nav-sticky .navigation-bar {
+  display: flex;
+  gap: 20px;
+}
+header .nav-sticky .navigation-bar a:hover {
+  color: rgb(113, 157, 113);
+}
+header .nav-sticky .navigation-bar .dropdawn {
+  width: 170px;
+  background-color: white;
+  display: flex;
+  position: absolute;
+  top: 172px;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
+  padding: 17px 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+}
+header .nav-sticky .navigation-bar .dropdawn.show {
+  opacity: 1;
+  transform: translateY(-20px);
+  transition: all 0.3s ease-out;
+}
+header .nav-sticky .navigation-bar .dropdawn.hide {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+header .nav-sticky .navigation-bar .dropdawn li {
+  height: auto;
+}
+header .nav-sticky .navigation-bar .dropdown-with-scroll {
+  top: 103px;
+}
+header .nav-sticky .navigation-bar li {
+  color: #323437;
+  height: 83px;
+  display: flex;
+  align-items: center;
+}
+header .nav-sticky .navigation-bar li:hover {
+  color: rgb(113, 157, 113);
+}
+header .nav-sticky .navigation-bar li a {
+  color: #32404d;
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+header .nav-sticky .nav-right {
+  display: flex;
+  align-items: center;
+  color: #212529;
+}
+header .nav-sticky .nav-right .call {
+  padding-right: 20px;
+}
+header .nav-sticky .nav-right .call .call-child {
+  color: #007a5c;
+}
+header .nav-sticky .nav-right .call span {
+  color: #32404d;
+}
+header .nav-sticky .nav-right ul {
+  padding: 0 20px;
+}
+header .nav-sticky .nav-right .line {
+  height: 23px;
+  width: 2px;
+  background-color: #f6f7f8;
+}
+header .nav-sticky .nav-right .icons {
+  padding: 0 20px;
+  display: flex;
+  gap: 7px;
+}
+header .nav-sticky .nav-right .icons li {
+  transform: rotateY(0deg);
+  transition: all ease-out 0.5s;
+}
+header .nav-sticky .nav-right .icons li a i {
+  font-size: 24px;
+}
+header .nav-sticky .nav-right .icons li:hover {
+  transform: rotateY(180deg);
+  transition: all ease-out 0.5s;
+}
+header .nav-sticky .nav-right .icons li:nth-child(1) a {
+  color: #3b5998;
+}
+header .nav-sticky .nav-right .icons li:nth-child(2) a {
+  color: #3b5998;
+}
+header .nav-sticky .nav-right .icons li:nth-child(3) a {
+  color: #1da1f2;
+}
+header .nav-sticky .nav-right .icons li:nth-child(4) a {
+  color: red;
+}
+header .nav-sticky .nav-right .icons li:nth-child(5) a {
+  color: #34a853;
+}
+
+main .one {
+  background-image: url("/assets/img/xh1_hero1.jpg.pagespeed.ic.nogT7L3zFj.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 325px;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+main .one .container {
+  width: auto;
+  padding-left: 8vw;
+}
+main .one .container .row,
+main .one .container h2,
+main .one .container p {
+  width: 541px;
+}
+main .one .container h2 {
+  font-size: 54px;
+  font-weight: 900;
+  margin-bottom: 9px;
+  color: #fff;
+  line-height: 1.2;
+  font-family: "Chivo-Light", sans-serif;
+}
+main .one .container p {
+  color: #fff;
+  margin-bottom: 41px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "Chivo-Light", sans-serif;
+}
+main #blog-about {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 100px 0;
+}
+main #blog-about .articles .blog-item {
+  margin-bottom: 50px;
+}
+main #blog-about .articles .blog-item .blog-item-img {
+  position: relative;
+}
+main #blog-about .articles .blog-item .blog-item-img img {
+  width: 736px;
+  height: 368px;
+}
+main #blog-about .articles .blog-item .blog-item-img a {
+  cursor: pointer;
+  position: absolute;
+  bottom: -12px;
+  left: 35px;
+  border-radius: 7px;
+  display: block;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 122, 92);
+  padding: 15px 30px;
+}
+main #blog-about .articles .blog-item .blog-item-img a h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0px;
+  line-height: 1.2;
+  font-family: "Chivo-Light", sans-serif;
+}
+main #blog-about .articles .blog-item .blog-item-img a p {
+  font-weight: 600;
+  line-height: 1.6;
+  font-family: "Chivo-Light", sans-serif;
+}
+main #blog-about .articles .blog-item .blog-item-img a:hover {
+  background-color: transparent;
+}
+main #blog-about .articles .blog-item .blog-item-img a:hover h3,
+main #blog-about .articles .blog-item .blog-item-img a:hover p {
+  color: #007a5c;
+}
+main #blog-about .articles .blog-item .blog-details {
+  box-shadow: rgba(221, 221, 221, 0.3) 0px 10px 20px 0px;
+  width: 736px;
+  padding: 60px 30px 35px 35px;
+}
+main #blog-about .articles .blog-item .blog-details a h2 {
+  transition: all 0.4s ease 0s;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  padding-bottom: 15px;
+  padding-top: 25px;
+  line-height: 1.2;
+  font-weight: 600;
+  font-family: "Chivo-Light", sans-serif;
+}
+main #blog-about .articles .blog-item .blog-details a h2:hover {
+  color: #007a5c;
+}
+main #blog-about .articles .blog-item .blog-details p {
+  color: rgb(93, 100, 106);
+  font-weight: 400;
+  line-height: 1.6;
+  font-family: "Chivo-Light", sans-serif;
+  width: 608px;
+  padding-bottom: 25px;
+}
+main #blog-about .articles .blog-item .blog-details ul {
+  display: flex;
+  gap: 25px;
+}
+main #blog-about .articles .blog-item .blog-details ul li a {
+  line-height: 1.5;
+  color: #999999;
+}
+main #blog-about .articles .blog-item .blog-details ul li a:hover {
+  color: #007a5c;
+}
+main #blog-about .articles .nav-blog ul {
+  display: flex;
+  justify-content: center;
+}
+main #blog-about .articles .nav-blog ul li a {
+  text-align: center;
+  margin-left: -1px;
+  line-height: 45px;
+  width: 45px;
+  height: 45px;
+  color: rgb(138, 138, 138);
+  border: 1px solid rgb(240, 233, 255);
+  margin-right: 10px;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+main #blog-about .articles .nav-blog ul li a i {
+  color: rgb(138, 138, 138);
+}
+main #blog-about .asides .input-button {
+  background: rgb(251, 249, 255);
+  width: 356px;
+  background: #fbf9ff;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+main #blog-about .asides .input-button form input {
+  height: 50px;
+  border-color: #f0e9ff;
+  font-size: 13px;
+  color: #999;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  padding: 0.375rem 0.75rem;
+}
+main #blog-about .asides .input-button form button {
+  background: rgb(0, 122, 92);
+  border-width: 1px 1px 1px 0px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgb(240, 233, 255);
+  border-right-color: rgb(240, 233, 255);
+  border-bottom-color: rgb(240, 233, 255);
+  -o-border-image: initial;
+     border-image: initial;
+  cursor: pointer;
+  padding: 14px 20px;
+  display: inline-flex;
+  color: #fff;
+}
+main #blog-about .asides .category {
+  width: 356px;
+  background: rgb(251, 249, 255);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+main #blog-about .asides .category h4 {
+  font-size: 20px;
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-family: "Chivo-Light", sans-serif;
+  line-height: 1.2;
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(240, 233, 255);
+}
+main #blog-about .asides .category ul li {
+  padding: 15px 0px 12px;
+  border-bottom: 1px solid rgb(240, 233, 255);
+  transition: all 0.3s ease 0s;
+  padding-bottom: 12px;
+}
+main #blog-about .asides .category ul li a {
+  font-size: 14px;
+  line-height: 20px;
+  color: #888888;
+  transition: 0.4s;
+  font-family: "Chivo-Light", sans-serif;
+  font-weight: 500;
+}
+main #blog-about .asides .category ul li a:hover {
+  color: #007a5c;
+}
+main #blog-about .asides .posts {
+  width: 356px;
+  background: rgb(251, 249, 255);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+main #blog-about .asides .posts .posts-childe {
+  font-size: 20px;
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-family: "Chivo-Light", sans-serif;
+  line-height: 1.2;
+}
+main #blog-about .asides .posts .post-item {
+  display: flex;
+  padding-bottom: 20px;
+}
+main #blog-about .asides .posts .post-item .media-body {
+  padding-left: 20px;
+}
+main #blog-about .asides .posts .post-item .media-body h3 {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #2d2d2d;
+}
+main #blog-about .asides .posts .post-item .media-body h3:hover {
+  color: #007a5c;
+}
+main #blog-about .asides .posts .post-item .media-body a {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(93, 100, 106);
+  font-family: "Chivo-Light", sans-serif;
+  font-weight: 400;
+}
+main #blog-about .asides .coluds {
+  width: 356px;
+  background: rgb(251, 249, 255);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+main #blog-about .asides .coluds h4 {
+  font-size: 20px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-family: "Chivo-Light", sans-serif;
+  line-height: 1.2;
+  color: #2d2d2d;
+  padding-top: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgb(240, 233, 255);
+}
+main #blog-about .asides .coluds .list {
+  display: flex;
+}
+main #blog-about .asides .coluds .list ul li a {
+  display: inline-block;
+  border: 1px solid rgb(238, 238, 238);
+  background: rgb(255, 255, 255);
+  padding: 4px 20px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  color: rgb(136, 136, 136);
+  font-size: 13px;
+  line-height: 1.5;
+}
+main #blog-about .asides .coluds .list ul li a:hover {
+  background-color: #007a5c;
+  color: #fff;
+}
+main #blog-about .asides .feeds {
+  width: 356px;
+  background: rgb(251, 249, 255);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+main #blog-about .asides .feeds h4 {
+  font-size: 20px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-family: "Chivo-Light", sans-serif;
+  line-height: 1.2;
+  color: #2d2d2d;
+  padding-top: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgb(240, 233, 255);
+}
+main #blog-about .asides .feeds .lists {
+  display: flex;
+  gap: 13px;
+}
+main #blog-about .asides .newsletter {
+  width: 356px;
+  background: rgb(251, 249, 255);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+main #blog-about .asides .newsletter h4 {
+  font-size: 20px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-family: "Chivo-Light", sans-serif;
+  line-height: 1.2;
+  color: #2d2d2d;
+  padding-top: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgb(240, 233, 255);
+}
+main #blog-about .asides .newsletter form .form-group input {
+  height: 50px;
+  border-color: rgb(240, 233, 255);
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Chivo-Light", sans-serif;
+  line-height: 1.5;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 20px;
+}
+main #blog-about .asides .newsletter form button {
+  width: 100%;
+  padding: 18px 44px;
+  font-family: "Chivo-Light", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid rgb(0, 122, 92);
+  letter-spacing: 1px;
+  background-color: #fff;
+  color: #007a5c;
+}
+main #blog-about .asides .newsletter form button:hover {
+  background-color: #007a5c;
+  color: #fff;
+}
+
+footer {
+  font-display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #32404d;
+}
+footer .navigation-part {
+  display: flex;
+  justify-content: space-around;
+  padding: 100px 0;
+}
+footer .navigation-part img {
+  width: 171px;
+  height: 49px;
+}
+footer .navigation-part .links li:hover,
+footer .navigation-part .programs li:hover {
+  color: #007a5c;
+  text-decoration: underline;
+}
+footer .navigation-part .links h4,
+footer .navigation-part .programs h4 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-family: "Chivo", sans-serif;
+  line-height: 1.2;
+}
+footer .navigation-part .links ul li,
+footer .navigation-part .programs ul li {
+  margin-bottom: 15px;
+}
+footer .navigation-part .links ul li a,
+footer .navigation-part .programs ul li a {
+  margin-bottom: 15px;
+  color: #a7aeb4;
+  font-weight: 400;
+  font-size: 16px;
+}
+footer .navigation-part .newsletter h4 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-family: "Chivo-Light", sans-serif;
+}
+footer .navigation-part .newsletter p {
+  color: #a7aeb4;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  font-family: "Chivo", sans-serif;
+}
+footer .navigation-part .newsletter #footer-form {
+  width: 416px;
+  display: flex;
+  align-items: center;
+}
+footer .navigation-part .newsletter input {
+  padding: 15.5px 30px;
+  width: 300px;
+  min-height: 40px;
+  font-size: 17px;
+}
+footer .navigation-part .newsletter button {
+  background-color: #007a5c;
+  padding: 21px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .navigation-part .newsletter button:hover {
+  cursor: pointer;
+}
+footer .navigation-part .newsletter .footer-social a i {
+  color: #fff;
+  padding: 20px 7px;
+  transform: rotateY(0deg);
+  transition: all ease-out 0.5s;
+}
+footer .navigation-part .newsletter .footer-social a i:hover {
+  color: #20c997;
+  transform: rotateY(180deg);
+  transition: all ease-out 0.5s;
+}
+
+.container {
+  width: 100%;
+  height: 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .container-childe {
+  width: 80%;
+}
+.container .container-childe .line {
+  height: 1px;
+  background-color: rgb(167, 174, 180);
+  opacity: 0, 5;
+}
+.container .container-childe p {
+  color: rgb(149, 153, 158);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 15px;
+  font-family: Chivo, sans-serif;
+  text-align: center;
+  padding: 40px 0 1px;
+}
+.container .container-childe p i {
+  color: #007a5c;
+}
+.container .container-childe p a {
+  color: #007a5c;
+}
+
+.to-top {
+  background: #007a5c;
+  height: 50px;
+  width: 50px;
+  right: 31px;
+  bottom: 18px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-out;
+}
+.to-top:hover {
+  cursor: pointer;
+}
+.to-top a {
+  line-height: 50px;
+}
+.to-top a i {
+  color: #fff;
+}
+
+.to-top.active {
+  pointer-events: auto;
+  opacity: 1;
+  bottom: 18px;
+  transition: all 2s ease-in-out;
+}/*# sourceMappingURL=blog.css.map */

@@ -1,0 +1,88 @@
+@media (max-width: 900px) {
+  header .header-top {
+    flex-direction: column;
+    gap: 0;
+  }
+  header .header-top .header-info-right a {
+    display: none;
+  }
+  header .header-top p {
+    font-size: 0.9rem;
+  }
+  header .header-top p span {
+    font-size: 0.9rem;
+  }
+  header .nav-sticky .nav-right .call {
+    display: none;
+  }
+  header .nav-sticky .navigation-bar {
+    display: none;
+  }
+  main .one {
+    background-size: cover;
+  }
+  main .two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0px;
+    height: auto;
+  }
+  main .two figure {
+    width: 760px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+  main .programs .information-childe .programs-information {
+    width: 45%;
+    height: 440px;
+  }
+  main #resources {
+    display: flex;
+    flex-direction: column;
+  }
+  main #resources .resources-left {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  main #resources .resources-right {
+    width: 100%;
+  }
+  main #stories .languages {
+    flex-wrap: wrap;
+    gap: 1px;
+  }
+  main #stories .languages .languages-childe {
+    width: 384px;
+    height: 485px;
+  }
+  main #pertners .carousel-container {
+    margin-bottom: 0;
+  }
+  main #pertners .pertners-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  main #pertners .pertners-bottom .pertners-left {
+    width: 100%;
+  }
+  main #pertners .pertners-bottom .pertners-right {
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .navigation-part {
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 54px;
+  }
+  footer .navigation-part .newsletter {
+    width: 290px;
+  }
+}/*# sourceMappingURL=media.css.map */

@@ -1,0 +1,134 @@
+@media (max-width: 900px) {
+
+
+    header {
+        .header-top {
+            flex-direction: column;
+            gap: 0;
+
+            .header-info-right {
+                a {
+                    display: none;
+                }
+            }
+
+            p {
+                font-size: 0.9rem;
+
+                span {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .nav-sticky {
+            .nav-right {
+                .call {
+                    display: none;
+                }
+            }
+
+            .navigation-bar {
+                display: none;
+            }
+        }
+    }
+
+    main {
+        .one {
+            background-size: cover;
+        }
+
+        .two {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+            figure {
+                width: 760px;
+                display: flex;
+                justify-content: center;
+                padding-bottom: 50px;
+            }
+
+            padding: 100px 0px;
+            height: auto;
+        }
+
+        .programs {
+            .information-childe {
+                .programs-information {
+                    width: 45%;
+                    height: 440px;
+                }
+            }
+        }
+
+        #resources {
+            display: flex;
+            flex-direction: column;
+
+            .resources-left {
+                width: 100%;
+                padding-bottom: 50px;
+            }
+
+            .resources-right {
+                width: 100%;
+            }
+        }
+
+        #stories {
+            .languages {
+                flex-wrap: wrap;
+                gap: 1px;
+
+
+
+                .languages-childe {
+                    width: 384px;
+                    height: 485px;
+                }
+            }
+        }
+
+        #pertners {
+            .carousel-container {
+                margin-bottom: 0;
+            }
+
+            .pertners-bottom {
+                display: flex;
+                flex-direction: column;
+
+                .pertners-left {
+                    width: 100%;
+                }
+
+                .pertners-right {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .navigation-part {
+            width: 80%;
+            flex-wrap: wrap;
+            gap: 54px;
+
+            .newsletter {
+                width: 290px;
+            }
+        }
+
+    }
+}
