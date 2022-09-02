@@ -1,7 +1,98 @@
+$myFirstFont: "Chivo-Light", sans-serif;
+$secondaryFont: "Chivo-Regular", sans-serif;
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+input:focus {
+    outline: none;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url("../fonts/Chivo-Light.ttf");
+}
+
+@font-face {
+    font-family: secondaryFont;
+    src: url("../fonts/Chivo-Regular.ttf");
+}
+
+@mixin underline {
+    a {
+        color: #007a5c;
+        border-bottom: 2px solid $primary-color;
+        padding-bottom: 6px;
+        font-weight: 600;
+
+        &:hover {
+            letter-spacing: 0.7px;
+            transition: all linear 0.3s;
+        }
+    }
+}
+
+$primary-color: #007a5c;
+
+body {
+    font-family: myFirstFont;
+    overflow-x: hidden;
+}
+
+
 @media (max-width: 900px) {
 
 
     header {
+        position: relative;
+
+        #mobile-navbar {
+            position: absolute;
+            background-color: white;
+            width: 90%;
+            flex-direction: column;
+            z-index: 10;
+            padding: 15px 20px;
+            gap: 20px;
+            top: 153px;
+
+            &.mobile-nav-with-scroll {
+                top: 83px;
+            }
+
+            &.dropdawn-nav {
+                display: none;
+            }
+
+            a {
+                color: #32404d;
+                font-family: "Chivo", sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+            }
+        }
+
+        .show-mobile-nav {
+            display: flex !important;
+        }
+
         .header-top {
             flex-direction: column;
             gap: 0;
@@ -23,6 +114,8 @@
 
         .nav-sticky {
             .nav-right {
+                display: none;
+
                 .call {
                     display: none;
                 }
@@ -31,12 +124,50 @@
             .navigation-bar {
                 display: none;
             }
+
+            .btn-click {
+                i {
+                    display: block;
+                }
+            }
+
+            .toggle-button {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 21px;
+            }
+
+            .toggle-button .bar {
+                height: 3px;
+                width: 100%;
+                background-color: #34a853;
+                border-radius: 10px;
+            }
         }
     }
 
     main {
         .one {
-            background-size: cover;
+            width: 100vw;
+            height: 400px;
+            background-position: center;
+            flex-direction: column;
+            justify-content: center;
+
+            .container {
+                padding-left: 0;
+
+                h1 {
+                    font-size: 25px;
+                    width: auto;
+                }
+
+                p {
+                    width: auto;
+                }
+            }
         }
 
         .two {
@@ -44,48 +175,124 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-
+            padding: 100px 0px;
+            height: auto;
 
             figure {
                 width: 760px;
                 display: flex;
                 justify-content: center;
                 padding-bottom: 50px;
+
+                img {
+                    width: 363px;
+                    height: 261px;
+                }
             }
 
-            padding: 100px 0px;
-            height: auto;
+            .two-right {
+                width: 369px;
+
+                h2 {
+                    font-size: 22px;
+
+                }
+            }
         }
 
         .programs {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .information {
+                width: 339px;
+
+                h2 {
+
+                    font-size: 24px;
+
+                }
+
+
+            }
+
             .information-childe {
+                display: flex;
+                flex-direction: column;
+
+
                 .programs-information {
-                    width: 45%;
-                    height: 440px;
+                    width: 369px;
                 }
             }
         }
 
         #resources {
+            height: auto;
+            width: 100%;
             display: flex;
             flex-direction: column;
+
 
             .resources-left {
                 width: 100%;
                 padding-bottom: 50px;
+
+                h2 {
+                    font-size: 24px;
+                }
+
+                .about {
+                    .about-childe {
+                        display: flex;
+                        flex-direction: column;
+
+
+                        .about-right {
+                            width: 271px;
+                            margin-bottom: 0;
+                            padding-bottom: 0;
+                        }
+
+                        a {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
             }
 
             .resources-right {
-                width: 100%;
+                .right-childe {
+                    width: 100vw;
+                    height: 300px;
+                }
             }
         }
 
         #stories {
+            margin-top: 25rem;
+
+            .container {
+                .top-stories {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    h2 {
+                        font-size: 20px;
+                    }
+
+                    a {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
             .languages {
-                flex-wrap: wrap;
-                gap: 1px;
-
-
+                flex-direction: column;
 
                 .languages-childe {
                     width: 384px;
@@ -95,8 +302,28 @@
         }
 
         #pertners {
+            width: 100%;
+            height: auto;
+            margin-top: 20rem;
+
+            .pertners-top {
+                h2 {
+                    font-size: 24px;
+                }
+
+                p {
+                    width: 369px;
+                }
+            }
+
             .carousel-container {
                 margin-bottom: 0;
+                width: 393px;
+
+                img {
+                    width: 131px;
+                    margin-left: 30px;
+                }
             }
 
             .pertners-bottom {
@@ -105,28 +332,49 @@
 
                 .pertners-left {
                     width: 100%;
+                    height: 250px;
                 }
 
                 .pertners-right {
                     width: 100%;
+
+                    h2 {
+
+                        font-size: 20px;
+                        font-family: $myFirstFont;
+                    }
+
+                    p {
+                        width: 333px;
+                    }
                 }
             }
+
+            border-bottom: 1px solid #e4dddd;
+
         }
     }
 
     footer {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        height: auto;
 
         .navigation-part {
-            width: 80%;
-            flex-wrap: wrap;
-            gap: 54px;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 0;
+            padding-top: 80px;
+            padding-left: 20px;
+            gap: 30px;
 
             .newsletter {
-                width: 290px;
+                #footer-form {
+                    width: 330px;
+                }
+
+                .footer-social {
+                    padding-bottom: 30px;
+                }
             }
         }
 

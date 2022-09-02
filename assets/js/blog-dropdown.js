@@ -2,6 +2,7 @@ const blog = document.querySelector('.blog');
 const dropdown2 = document.querySelector('.dropdawn');
 
 blog.addEventListener('mouseenter', () => {
+    console.log(11);
     dropdown2.classList.add('show');
     dropdown2.classList.remove('hide');
 });

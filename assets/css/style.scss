@@ -17,6 +17,7 @@ html {
 button {
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 input:focus {
@@ -55,6 +56,10 @@ body {
 
 //----------------- start header--------------
 header {
+  #mobile-navbar {
+    display: none;
+  }
+
   .header-top {
     width: 100%;
     height: 70px;
@@ -265,6 +270,18 @@ header {
           color: #34a853;
         }
       }
+    }
+
+    .btn-click {
+      i {
+        display: none;
+        font-size: 30px;
+        color: #34a853;
+      }
+    }
+
+    .toggle-button {
+      display: none;
     }
   }
 }

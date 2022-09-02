@@ -120,6 +120,7 @@ header .nav-sticky .navigation-bar .dropdawn {
   gap: 10px;
   transition: all 0.3s ease-out;
   opacity: 0;
+  z-index: 10;
 }
 header .nav-sticky .navigation-bar .dropdawn.show {
   opacity: 1;

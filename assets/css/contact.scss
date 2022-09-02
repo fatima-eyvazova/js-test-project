@@ -157,6 +157,7 @@ header {
                 gap: 10px;
                 transition: all .3s ease-out;
                 opacity: 0;
+                z-index: 10;
 
                 &.show {
                     opacity: 1;

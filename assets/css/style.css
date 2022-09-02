@@ -14,6 +14,7 @@ html {
 button {
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 input:focus {
@@ -32,6 +33,9 @@ body {
   font-family: myFirstFont;
 }
 
+header #mobile-navbar {
+  display: none;
+}
 header .header-top {
   width: 100%;
   height: 70px;
@@ -202,6 +206,14 @@ header .nav-sticky .nav-right .icons li:nth-child(4) a {
 }
 header .nav-sticky .nav-right .icons li:nth-child(5) a {
   color: #34a853;
+}
+header .nav-sticky .btn-click i {
+  display: none;
+  font-size: 30px;
+  color: #34a853;
+}
+header .nav-sticky .toggle-button {
+  display: none;
 }
 
 main .one {
